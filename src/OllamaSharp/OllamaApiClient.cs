@@ -197,7 +197,7 @@ public class OllamaApiClient : IOllamaApiClient, IChatClient, IEmbeddingGenerato
 		if (string.IsNullOrEmpty(request.Model))
 			request.Model = SelectedModel;
 
-		using var requestMessage = new HttpRequestMessage(HttpMethod.Post, Endpoints.Chat);//todo egor here
+		using var requestMessage = new HttpRequestMessage(HttpMethod.Post, _client.BaseAddress);
 		requestMessage.Content = new StringContent(JsonSerializer.Serialize(request, OutgoingJsonSerializerOptions), Encoding.UTF8, MimeTypes.Json);
 
 		var completion = request.Stream
