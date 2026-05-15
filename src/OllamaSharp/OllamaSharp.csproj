@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;netstandard2.1;net8.0</TargetFrameworks>
 		<Version>5.3.5</Version>
 		<AssemblyVersion>5.3.5.0</AssemblyVersion>
 		<FileVersion>5.3.5.0</FileVersion>
@@ -22,6 +21,7 @@
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\..\OllamaSharp.snk</AssemblyOriginatorKeyFile>
 		<NoWarn>$(NoWarn);IDE0065;IDE0055;IDE0011;S3881</NoWarn>
+		<TargetFramework>net8.0</TargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>
